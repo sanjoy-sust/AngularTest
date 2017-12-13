@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+    <script src="assets/libs/angular.min.js"></script>
+    <script src="assets/libs/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/components/home/controller/home_controller.js"></script>
+    <script src="app/components/employees/controller/employee_controller.js"></script>
+    <script src="app/components/employees/service/employee_service.js"></script>
+    <script src="app/components/github/controller/github_controller.js"></script>
+    <script src="app/components/github/service/github_service.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="employee">Employee</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container">
+    <div ui-view></div>
+</div>>
+
+<div class="text-center">
+</div>
+</body>
+</html>
