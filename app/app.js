@@ -3,7 +3,8 @@ var routerApp = angular.module('routerApp',
         'ui.router',
         'routerApp.scotch',
         'routerApp.employee',
-        'routerApp.github'
+        'routerApp.github',
+        'routerApp.path'
     ]);
 
 routerApp.config(function ($stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
@@ -50,6 +51,11 @@ routerApp.config(function ($stateProvider, $urlRouterProvider, $urlMatcherFactor
             url: '/github',
             templateUrl: 'app/components/github/templates/github_view.html',
             controller: 'githubController'
+        })
+        .state('path', {
+            url: '/path',
+            templateUrl: 'app/components/frieght_management/templates/path_view.html',
+            controller: 'pathController'
         })
     ;
 });
